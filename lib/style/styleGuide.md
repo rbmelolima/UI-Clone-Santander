@@ -1,5 +1,5 @@
 # Colors
-Amaranth Red   #D90429     (--red-primary)
+Rosso Corsa    #CC0001     (--red-primary)
 Imperial Red   #EF233C     (--red-secundary)
 Alice Blue     #EDF2F4     (--blue-light)
 Manatee        #8D99AE     (--gray-light)
