@@ -14,15 +14,28 @@ class MyApp extends StatelessWidget {
       title: 'UI Bank',
       theme: ThemeData(
         primarySwatch: Colors.blue,
-        backgroundColor: const Color(0xffEDF2F4),        
-        primaryColor: const Color(0xffCC0001), 
+        backgroundColor: const Color(0xffEDF2F4),
+        primaryColor: const Color(0xffCC0001),
         primaryColorLight: const Color(0xffEF233C),
-        accentColor: const Color(0xff2B2D42),                      
+        accentColor: const Color(0xff2B2D42),
         textTheme: TextTheme(
           //Textfields pattern
-          subtitle1: TextStyle(fontSize: 16), 
-                   
-        ), 
+          subtitle1: TextStyle(fontSize: 16),
+          bodyText1: TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.bold,
+          ),
+          caption: TextStyle(
+            color: Colors.grey[600],
+            height: 1.6,
+            fontSize: 14,
+          ),
+          headline1: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.normal,
+            color: Colors.black,
+          ),
+        ),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: Account(),

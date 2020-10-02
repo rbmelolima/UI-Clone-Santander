@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_icons/flutter_icons.dart';
+
 import 'package:ui_bank/components/UserAccountInformation/index.dart';
 
 class DrawerHeaderAccount extends StatelessWidget {
@@ -22,7 +24,7 @@ class DrawerHeaderAccount extends StatelessWidget {
               child: Row(
                 children: [
                   Icon(
-                    Icons.exit_to_app,
+                    Feather.log_in,
                     color: Theme.of(context).primaryColor,
                   ),
                   Container(
@@ -45,116 +47,122 @@ class DrawerHeaderAccount extends StatelessWidget {
   }
 }
 
+// ignore: must_be_immutable
 class DrawerList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         ListTile(
-          leading: Icon(Icons.home),
+          leading: Icon(Feather.home),
           trailing: Icon(Icons.keyboard_arrow_right),
-          title: Text("Home"),
+          title: Text("Home", style: textStyle),
           onTap: () {},
         ),
         _customDivider(),
         ListTile(
-          leading: Icon(Icons.home),
+          leading: Icon(Feather.file_minus),
           trailing: Icon(Icons.keyboard_arrow_right),
-          title: Text("Confirmações em aberto"),
+          title: Text("Confirmações em aberto", style: textStyle),
           onTap: () {},
         ),
         _customDivider(),
         ListTile(
-          leading: Icon(Icons.home),
+          leading: Icon(Feather.dollar_sign),
           trailing: Icon(Icons.keyboard_arrow_right),
-          title: Text("Saldo e extrato"),
+          title: Text("Saldo e extrato", style: textStyle),
           onTap: () {},
         ),
         _customDivider(),
         ListTile(
-          leading: Icon(Icons.home),
+          leading: Icon(Feather.gift),
           trailing: Icon(Icons.keyboard_arrow_right),
-          title: Text("Transações"),
+          title: Text("Transações", style: textStyle),
           onTap: () {},
         ),
         _customDivider(),
         ListTile(
-          leading: Icon(Icons.home),
+          leading: Icon(Feather.credit_card),
           trailing: Icon(Icons.keyboard_arrow_right),
-          title: Text("Cartões"),
+          title: Text("Cartões", style: textStyle),
           onTap: () {},
         ),
         _customDivider(),
         ListTile(
-          leading: Icon(Icons.home),
+          leading: Icon(FontAwesome.handshake_o),
           trailing: Icon(Icons.keyboard_arrow_right),
-          title: Text("Empréstimos"),
+          title: Text("Empréstimos", style: textStyle),
           onTap: () {},
         ),
         _customDivider(),
         ListTile(
-          leading: Icon(Icons.home),
+          leading: Icon(Feather.clock),
           trailing: Icon(Icons.keyboard_arrow_right),
-          title: Text("Financiamentos"),
+          title: Text("Financiamentos", style: textStyle),
           onTap: () {},
         ),
         _customDivider(),
         ListTile(
-          leading: Icon(Icons.home),
+          leading: Icon(AntDesign.home),
           trailing: Icon(Icons.keyboard_arrow_right),
-          title: Text("Poupança"),
+          title: Text("Poupança", style: textStyle),
           onTap: () {},
         ),
         _customDivider(),
         ListTile(
-          leading: Icon(Icons.home),
+          leading: Icon(FontAwesome.line_chart),
           trailing: Icon(Icons.keyboard_arrow_right),
-          title: Text("Investimentos"),
+          title: Text("Investimentos", style: textStyle),
           onTap: () {},
         ),
         _customDivider(),
         ListTile(
-          leading: Icon(Icons.home),
+          leading: Icon(Ionicons.ios_car),
           trailing: Icon(Icons.keyboard_arrow_right),
-          title: Text("Consórcio"),
+          title: Text("Consórcio", style: textStyle),
+          onTap: () {},
+        ),
+        _whiteSpace(),
+        ListTile(
+          leading: Icon(Ionicons.ios_cash),
+          trailing: Icon(Icons.keyboard_arrow_right),
+          title: Text("Traga seu salário", style: textStyle),
           onTap: () {},
         ),
         _customDivider(),
         ListTile(
-          leading: Icon(Icons.home),
+          leading: Icon(Feather.activity),
           trailing: Icon(Icons.keyboard_arrow_right),
-          title: Text("Traga seu salário"),
+          title: Text("Informe de rendimentos", style: textStyle),
+          onTap: () {},
+        ),
+        ListTile(
+          leading: Icon(Feather.box),
+          trailing: Icon(Icons.keyboard_arrow_right),
+          title: Text("Serviços da conta", style: textStyle),
+          onTap: () {},
+        ),
+       _whiteSpace(),
+        ListTile(
+          leading: Icon(Feather.settings),
+          trailing: Icon(Icons.keyboard_arrow_right),
+          title: Text("Configurações", style: textStyle),
+          onTap: () {},
+        ),
+        _whiteSpace(),
+        ListTile(
+          leading: Icon(Feather.map_pin),
+          trailing: Icon(Icons.keyboard_arrow_right),
+          title: Text("Agências", style: textStyle),
           onTap: () {},
         ),
         _customDivider(),
         ListTile(
-          leading: Icon(Icons.home),
+          leading: Icon(Feather.message_circle),
           trailing: Icon(Icons.keyboard_arrow_right),
-          title: Text("Informe de rendimentos"),
+          title: Text("Atendimento", style: textStyle),
           onTap: () {},
-        ),
-        _customDivider(),
-        ListTile(
-          leading: Icon(Icons.home),
-          trailing: Icon(Icons.keyboard_arrow_right),
-          title: Text("Configurações"),
-          onTap: () {},
-        ),
-        _customDivider(),
-        ListTile(
-          leading: Icon(Icons.home),
-          trailing: Icon(Icons.keyboard_arrow_right),
-          title: Text("Agências"),
-          onTap: () {},
-        ),
-        _customDivider(),
-        ListTile(
-          leading: Icon(Icons.home),
-          trailing: Icon(Icons.keyboard_arrow_right),
-          title: Text("Atendimento"),
-          onTap: () {},
-        ),
-        _customDivider(),
+        ),        
       ],
     );
   }
@@ -167,4 +175,11 @@ class DrawerList extends StatelessWidget {
       height: 2,
     ));
   }
+
+  Widget _whiteSpace() {
+    return Container(height: 32, color: Color(0xffEDF2F4));
+  }
+
+  TextStyle textStyle = TextStyle(
+      fontSize: 14, fontWeight: FontWeight.normal, color: Colors.black87);
 }
