@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:ui_bank/components/Drawer/index.dart';
 import 'package:ui_bank/components/UserAccountInformation/index.dart';
@@ -13,7 +14,11 @@ class Account extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         elevation: 0,
-        title: Text("Santander"),
+        title: SvgPicture.asset(
+          'images/santander-logo.svg',
+          color: Colors.white,
+          width: 120,
+        ),
         actions: [
           IconButton(
             icon: Icon(Feather.bell),

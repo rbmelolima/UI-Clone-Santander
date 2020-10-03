@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'UI Bank',
+      title: 'UI Clone Santander',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         backgroundColor: const Color(0xffEDF2F4),
