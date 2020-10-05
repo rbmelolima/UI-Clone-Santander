@@ -37,6 +37,8 @@ class Account extends StatelessWidget {
           _Shortcuts(),
           _ShoppingCard(),
           _UserCards(),
+          _UserLoan(),
+          _UserInvestments()
         ],
       ),
     );
@@ -144,12 +146,13 @@ class _Shortcuts extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 126,
       color: Theme.of(context).backgroundColor,
       width: double.infinity,
-      padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+      height: 152,
+      padding: EdgeInsets.symmetric(vertical: 8),
       margin: EdgeInsets.symmetric(vertical: 24),
       child: ListView(
+        shrinkWrap: true,
         scrollDirection: Axis.horizontal,
         children: [
           _shortcutCard(
@@ -201,12 +204,14 @@ class _Shortcuts extends StatelessWidget {
   }) {
     return Container(
       width: 110,
+      height: 120,
       margin: position % 2 == 0
-          ? EdgeInsets.only(right: 8, left: 8)
-          : EdgeInsets.all(0),
+          ? EdgeInsets.symmetric(vertical: 16)
+          : EdgeInsets.symmetric(vertical: 16, horizontal: 16),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(4),
         color: Colors.white,
+        boxShadow: [defaultShadow],
       ),
       padding: EdgeInsets.all(8),
       child: Column(
@@ -240,6 +245,7 @@ class _ShoppingCard extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8),
         color: Colors.white,
+        boxShadow: [defaultShadow],
       ),
       child: Row(
         children: [
@@ -337,7 +343,211 @@ class _UserCards extends StatelessWidget {
               ),
               borderSide: BorderSide(color: Theme.of(context).primaryColor),
             ),
+          ),
+          Container(
+            padding: EdgeInsets.symmetric(vertical: 24, horizontal: 16),
+            margin: EdgeInsets.only(top: 16),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(8),
+              color: Colors.white,
+              boxShadow: [defaultShadow],
+            ),
+            child: Row(
+              children: [
+                Expanded(
+                  child: Icon(
+                    Feather.credit_card,
+                    color: Theme.of(context).primaryColor,
+                  ),
+                  flex: 1,
+                ),
+                Expanded(
+                  flex: 4,
+                  child: Text(
+                    "Roger, precisando de um cartão de crédito? Veja nossas opções!",
+                    style: Theme.of(context).textTheme.caption,
+                  ),
+                )
+              ],
+            ),
           )
+        ],
+      ),
+    );
+  }
+}
+
+class _UserLoan extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.symmetric(horizontal: 16, vertical: 24),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            "Empréstimos",
+            style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          Container(
+            width: double.infinity,
+            padding: EdgeInsets.all(16),
+            margin: EdgeInsets.only(top: 16),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(8),
+              color: Colors.white,
+              boxShadow: [defaultShadow],
+            ),
+            child: Column(
+              children: [
+                Container(
+                  child: Row(
+                    children: [
+                      Container(
+                        child: Icon(Feather.gift),
+                        margin: EdgeInsets.only(right: 16),
+                      ),
+                      Text(
+                        "Empréstimos",
+                        style: Theme.of(context).textTheme.headline1,
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.only(top: 16),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    "Organize sua vida financeira",
+                    style: Theme.of(context).textTheme.caption,
+                  ),
+                ),
+                Container(
+                  alignment: Alignment.centerLeft,
+                  margin: EdgeInsets.only(top: 32, bottom: 16),
+                  child: Text(
+                    "Veja como andam as suas finanças",
+                    style: TextStyle(fontSize: 16),
+                  ),
+                ),
+                SizedBox(
+                  width: double.infinity,
+                  child: RaisedButton(
+                    elevation: 0,
+                    padding: EdgeInsets.symmetric(vertical: 16),
+                    color: Theme.of(context).primaryColor,
+                    textColor: Colors.white,
+                    child: Text("Acessar meu momento"),
+                    onPressed: () {},
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _UserInvestments extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            "Poupança e Investimentos",
+            style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.all(16),
+            width: double.infinity,
+            margin: EdgeInsets.only(top: 16),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(8),
+              color: Colors.white,
+              boxShadow: [defaultShadow],
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  child: Row(
+                    children: [
+                      Container(
+                        child: Icon(AntDesign.home),
+                        margin: EdgeInsets.only(right: 16),
+                      ),
+                      Text(
+                        "Poupança",
+                        style: Theme.of(context).textTheme.headline1,
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.only(top: 16),
+                  child: Text(
+                    "Guarde seu dinheiro agora mesmo",
+                    style: Theme.of(context).textTheme.caption,
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.only(top: 32, bottom: 24),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          "Valor total",
+                          style: TextStyle(
+                            fontSize: 16,
+                          ),
+                        ),
+                      ),
+                      Container(
+                        alignment: Alignment.centerLeft,
+                        margin: EdgeInsets.only(bottom: 8),
+                        child: Text(
+                          "R\$: 100.000,00",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16,
+                            height: 1.6,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Divider(
+                  color: Colors.grey[700],
+                ),
+                Container(
+                  alignment: Alignment.center,
+                  child: FlatButton(
+                    child: Text(
+                      "Ver mais",
+                      style: TextStyle(
+                        color: Theme.of(context).primaryColor,
+                      ),
+                    ),
+                    onPressed: () {},
+                  ),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );

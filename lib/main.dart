@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'UI Clone Santander',
       theme: ThemeData(
         primarySwatch: Colors.blue,
-        backgroundColor: const Color(0xffEDF2F4),
+        backgroundColor: const Color(0xffFAFAFA),
         primaryColor: const Color(0xffCC0001),
         primaryColorLight: const Color(0xffEF233C),
         accentColor: const Color(0xff2B2D42),
