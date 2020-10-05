@@ -55,14 +55,12 @@ class _UserBalance extends StatelessWidget {
           height: 150,
           alignment: Alignment.centerLeft,
           color: Theme.of(context).primaryColor,
-          child: Padding(
-            padding: EdgeInsets.symmetric(
-              vertical: 24,
-              horizontal: 16,
-            ),
-            child: UserAccountInformation(
-              textColor: Colors.white,
-            ),
+          padding: EdgeInsets.symmetric(
+            vertical: 24,
+            horizontal: 16,
+          ),
+          child: UserAccountInformation(
+            textColor: Colors.white,
           ),
         ),
         Container(
@@ -77,19 +75,17 @@ class _UserBalance extends StatelessWidget {
           ),
           child: Column(
             children: [
-              Container(
-                child: Row(
-                  children: [
-                    Container(
-                      child: Icon(FontAwesome.dollar),
-                      margin: EdgeInsets.only(right: 16),
-                    ),
-                    Text(
-                      "Saldo disponível",
-                      style: Theme.of(context).textTheme.headline1,
-                    ),
-                  ],
-                ),
+              Row(
+                children: [
+                  Container(
+                    child: Icon(FontAwesome.dollar),
+                    margin: EdgeInsets.only(right: 16),
+                  ),
+                  Text(
+                    "Saldo disponível",
+                    style: Theme.of(context).textTheme.headline1,
+                  ),
+                ],
               ),
               Container(
                 margin: EdgeInsets.only(top: 32, bottom: 24),
@@ -403,19 +399,17 @@ class _UserLoan extends StatelessWidget {
             ),
             child: Column(
               children: [
-                Container(
-                  child: Row(
-                    children: [
-                      Container(
-                        child: Icon(Feather.gift),
-                        margin: EdgeInsets.only(right: 16),
-                      ),
-                      Text(
-                        "Empréstimos",
-                        style: Theme.of(context).textTheme.headline1,
-                      ),
-                    ],
-                  ),
+                Row(
+                  children: [
+                    Container(
+                      child: Icon(Feather.gift),
+                      margin: EdgeInsets.only(right: 16),
+                    ),
+                    Text(
+                      "Empréstimos",
+                      style: Theme.of(context).textTheme.headline1,
+                    ),
+                  ],
                 ),
                 Container(
                   margin: EdgeInsets.only(top: 16),
@@ -480,19 +474,17 @@ class _UserInvestments extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Container(
-                  child: Row(
-                    children: [
-                      Container(
-                        child: Icon(AntDesign.home),
-                        margin: EdgeInsets.only(right: 16),
-                      ),
-                      Text(
-                        "Poupança",
-                        style: Theme.of(context).textTheme.headline1,
-                      ),
-                    ],
-                  ),
+                Row(
+                  children: [
+                    Container(
+                      child: Icon(AntDesign.home),
+                      margin: EdgeInsets.only(right: 16),
+                    ),
+                    Text(
+                      "Poupança",
+                      style: Theme.of(context).textTheme.headline1,
+                    ),
+                  ],
                 ),
                 Container(
                   margin: EdgeInsets.only(top: 16),
