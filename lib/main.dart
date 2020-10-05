@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ui_bank/screens/Account/index.dart';
-//import 'package:ui_bank/screens/Login/index.dart';
+//import 'package:ui_bank/screens/Account/index.dart';
+import 'package:ui_bank/screens/Login/index.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: const Color(0xffFAFAFA),
         primaryColor: const Color(0xffCC0001),
         primaryColorLight: const Color(0xffEF233C),
-        accentColor: const Color(0xff2B2D42),
+        accentColor: const Color(0xff387711),
         textTheme: TextTheme(
           //Textfields pattern
           subtitle1: TextStyle(fontSize: 16),
@@ -35,10 +35,14 @@ class MyApp extends StatelessWidget {
             fontWeight: FontWeight.normal,
             color: Colors.black,
           ),
+          button: TextStyle(
+            fontSize: 16,
+            color: Colors.white,
+          ),
         ),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Account(),
+      home: Login(),
     );
   }
 }
