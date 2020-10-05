@@ -28,5 +28,9 @@ $ flutter run
 - [x] Página de login (Redesign)
 - [x] Página inicial (Clone)
 
+## :construction: Próximas features
+- [ ] Ajustar fonte do aplicativo
+- [ ] Cards expandíveis
+
 ## :link: Referências
 [Santander Design Styleguide](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwicsPXamZ7sAhUDKLkGHVveA1AQFjAAegQIBBAC&url=https%3A%2F%2Fsantander-styleguide.herokuapp.com%2F&usg=AOvVaw11NSZvdvQigHgx9sE82_ro)
