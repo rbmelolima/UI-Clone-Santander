@@ -96,7 +96,7 @@ class _UserBalance extends StatelessWidget {
                       alignment: Alignment.centerLeft,
                       margin: EdgeInsets.only(bottom: 8),
                       child: Text(
-                        "R\$: 1000,00",
+                        "R\$: 95.000,00",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 24,
